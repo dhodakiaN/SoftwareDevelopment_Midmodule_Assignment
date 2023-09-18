@@ -1,6 +1,19 @@
+
 import unittest
 import timeit
 import random
+import os
+
+FOLDER_PATH = r'C:\\Users\\NDhod\\Desktop\\Practical Assessment_Programming'
+
+def listDir(dir):
+    fileNames = os.listdir(dir)
+    for fileName in fileNames:  
+        print('File Name:' + fileName)
+        print('Folder Path: ' + os.path.abspath(os.path.join(dir, fileName)))  # Use os.path.join correctly
+
+if __name__ == '__main__':  
+    listDir(FOLDER_PATH)
 
 
 ###################################
